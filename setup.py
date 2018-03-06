@@ -11,7 +11,7 @@ setup(
 
     url = 'https://github.com/saptarshiguha/s3logger',
 
-    setup_requires = ['pytest-runner'],
-    install_requires = ['smart_open'],
-    tests_require = ['moto', 'pytest']
+    setup_requires = ['boto'],
+    install_requires = ['boto']
+
 )
