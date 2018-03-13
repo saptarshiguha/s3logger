@@ -4,7 +4,7 @@ setup(
     name = 's3logger',
     version = '0.0.1',
     description = 'Log Messages to File on S3',
-    py_modules = ['logger'],
+    py_modules = ['s3logger'],
 
     author = u'Saptarshi Guha',
     author_email = 'sguha@mozilla.com',

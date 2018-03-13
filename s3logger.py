@@ -1,4 +1,3 @@
-import smart_open
 from datetime import datetime, timedelta
 from logging import Handler
 
@@ -35,7 +34,7 @@ class S3LogHandler(Handler):
     """
 
     _buffer_size = 5 * 1024 ** 2
-
+    
     def __init__(self, bucket, prefix, contextId):
         Handler.__init__(self)
         self.bucket = _clean_s3_path(bucket)
@@ -49,7 +48,12 @@ class S3LogHandler(Handler):
         with open('/tmp/frobbish','w') as f:
             f.write("")
         
-
+    def clear():
+        with open("/tmp/frobbish","w") as f:
+            f.write('')
+    def logloc():
+        return self.k.key
+    
     def emit(self, record):
         log_entry = self.format(record)
         with open("/tmp/frobbish","r") as f:
